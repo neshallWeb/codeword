@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CodeWord Challenge</string>
+
+<!--    <string name="facebook_app_id">391587196228210</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb391587196228210</string>-->
+<!--    <string name="facebook_client_token">ca0b66edaf9bbfd57ae6afdd7b5c1fee</string>-->
+
+<!--    <string name="facebook_app_id">5100168716727806</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb5100168716727806</string>-->
+<!--    <string name="facebook_client_token">0b05ec28b53da8a48980358a879ae998</string>-->
+
+<!--    <string name="facebook_app_id">693452481736367</string>-->
+<!--    <string name="fb_login_protocol_scheme">fb693452481736367</string>-->
+<!--    <string name="facebook_client_token">6c2b4aadef1414343ea70992fc67d8c0</string>-->
+
+    <string name="facebook_app_id">1907737749435666</string>
+    <string name="fb_login_protocol_scheme">fb1907737749435666</string>
+    <string name="facebook_client_token">3faa19467b6ccb156208beeaf85e742b</string>
+
+</resources>

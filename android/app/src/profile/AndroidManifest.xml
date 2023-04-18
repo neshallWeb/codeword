@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cab.codeword.neshallweb">
+    <!--    package="com.cab.codeword.neshallweb">-->
+    <!--    package="com.neshallweb.codeword">-->
+
+
+    <!-- Flutter needs it to communicate with the running application
+         to allow setting breakpoints, to provide hot reload, etc.
+    -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+</manifest>

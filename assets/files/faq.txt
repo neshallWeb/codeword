@@ -1,0 +1,15 @@
+1. What are the rules of Codewords?
+The rules of codewords are to work out which number represents each letter from A - Z in the grid.
+
+You then must go through the grid and replace each instance of a number with the letter that it represents, once you've worked it out.
+
+Thus if you know that 12 = E, then go through and write an E in for each instance of 12, and remember to cross off E on the letter grid underneath so you know it is placed.
+
+Often you will be given some starter letters, so place these first.
+
+2. What strategy tips will help me solve Codewords puzzles?
+Look for the numbers that occur most frequently in the puzzle and use basic frequency analysis to realize that these are probably the E, T, and A in other words they correspond to the most common letters in the English language.
+
+Use the given letters and fill these in and concentrate on seeing if they can be used to help you place any words and therefore other letters.
+
+Cross off from A - Z as you go through so you can easily see at a glance what else you have to place.

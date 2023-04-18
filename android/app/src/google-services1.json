@@ -1,0 +1,84 @@
+{
+  "project_info": {
+    "project_number": "1054300774746",
+    "project_id": "code-word-puzzle-game",
+    "storage_bucket": "code-word-puzzle-game.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054300774746:android:95f7b9eec35829cec39363",
+        "android_client_info": {
+          "package_name": "com.cab.codeword.neshallweb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054300774746-75a1v6m7vp8h7p59uad4lhvliinlfdfs.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cab.codeword.neshallweb",
+            "certificate_hash": "7e9753272627c3a7ba3983d6c68a31b9c133fd9e"
+          }
+        },
+        {
+          "client_id": "1054300774746-teahrsf43o3at1v8sv7s47drnnjcrajf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhtVcJllISG6dNh8glBid9QZr3nsZb_dY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054300774746-teahrsf43o3at1v8sv7s47drnnjcrajf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054300774746:android:e0f4eddeb8305955c39363",
+        "android_client_info": {
+          "package_name": "com.neshallweb.codeword"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054300774746-u6i7eb6eq0loh7uptnn95v3nrfs32nae.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neshallweb.codeword",
+            "certificate_hash": "7e9753272627c3a7ba3983d6c68a31b9c133fd9e"
+          }
+        },
+        {
+          "client_id": "1054300774746-teahrsf43o3at1v8sv7s47drnnjcrajf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhtVcJllISG6dNh8glBid9QZr3nsZb_dY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054300774746-teahrsf43o3at1v8sv7s47drnnjcrajf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
