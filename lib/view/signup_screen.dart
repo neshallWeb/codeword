@@ -179,24 +179,25 @@ class _SignScreenState extends State<SignScreen> {
                             controller: nameCtrl,
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.text,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               hintText: "Name",
                               hintStyle: TextStyle(
                                   // color: Color(0xffffffff),
                                   color: Color(0xff989898),
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 15,
+                                  /*fontSize: 15,*/
+                                fontSize: isTablat?20:15,
                                 ),
-                              border: UnderlineInputBorder(
+                              border: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              enabledBorder: UnderlineInputBorder(
+                              enabledBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),                        ),
@@ -230,24 +231,25 @@ class _SignScreenState extends State<SignScreen> {
                             controller: emailCtrl,
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.text,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               hintText: "Email",
                               hintStyle: TextStyle(
                                 // color: Color(0xffffffff),
                                 color: Color(0xff989898),
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w600,
-                                fontSize: 15,
+                                /*fontSize: 15,*/
+                                fontSize: isTablat?20:15,
                               ),
-                              border: UnderlineInputBorder(
+                              border: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              enabledBorder: UnderlineInputBorder(
+                              enabledBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
@@ -283,24 +285,25 @@ class _SignScreenState extends State<SignScreen> {
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.text,
                             obscureText: true,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               hintText: "Password",
                               hintStyle: TextStyle(
                                 // color: Color(0xffffffff),
                                 color: Color(0xff989898),
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w600,
-                                fontSize: 15,
+                                /*fontSize: 15,*/
+                                fontSize: isTablat?20:15,
                               ),
-                              border: UnderlineInputBorder(
+                              border: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              enabledBorder: UnderlineInputBorder(
+                              enabledBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
@@ -465,12 +468,13 @@ class _SignScreenState extends State<SignScreen> {
                                   ),
                                 ],
                               ),
-                              child: const Text("Confirm",
+                              child: Text("Confirm",
                                 style: TextStyle(
                                   color: Color(0xffffffff),
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 15,
+                                  /*fontSize: 15,*/
+                                  fontSize: isTablat?20:15,
                                 ),
                               ),
                             ),

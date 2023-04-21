@@ -2310,7 +2310,7 @@ class _Screen4State extends State<Screen4> with WidgetsBindingObserver, SingleTi
 
                   // top: (45*scale) / mockupHeight * height,
                   /*top: (height<=640?25:45*scale) / mockupHeight * height,*/
-                  top: isTablat?30:(height<=640?25:45*scale) / mockupHeight * height,
+                  top: isTablat?45:(height<=640?25:45*scale) / mockupHeight * height,
 
                   // left: 0,
                   child: Container(
@@ -2344,6 +2344,7 @@ class _Screen4State extends State<Screen4> with WidgetsBindingObserver, SingleTi
                         textAlign: TextAlign.center,
                         style: GoogleFonts.roboto(
                           color: Color(0xff459F67),
+                          /*fontSize: (20.0*scale) / mockupWidth * width,*/
                           fontSize: (20.0*scale) / mockupWidth * width,
                           fontWeight: FontWeight.w700,
                         ),
@@ -2360,7 +2361,8 @@ class _Screen4State extends State<Screen4> with WidgetsBindingObserver, SingleTi
                             widget.isDailyChallenge?"Daily Challenge":"${widget.mode} ${currentLevel}",
                             style: GoogleFonts.roboto(
                               color: Color(0xff459F67),
-                              fontSize: (20.0*scale) / mockupWidth * width,
+                              /*fontSize: (20.0*scale) / mockupWidth * width,*/
+                              fontSize: isTablat?25:(20.0*scale) / mockupWidth * width,
                               // fontSize: ((widget.mode.length>6)?16:20.0*scale) / mockupWidth * width,
 
                               // fontSize: (widget.isDailyChallenge?15:20.0) / mockupHeight * height,
@@ -2377,7 +2379,8 @@ class _Screen4State extends State<Screen4> with WidgetsBindingObserver, SingleTi
                             style: GoogleFonts.roboto(
                               color: Color(0xff74C171),
                               // fontSize: 15.0 / mockupHeight * height,
-                              fontSize: (15.0*scale) / mockupWidth * width,
+                              /*fontSize: (15.0*scale) / mockupWidth * width,*/
+                              fontSize: isTablat?20:(15.0*scale) / mockupWidth * width,
                               // letterSpacing: -1.5,
                               fontWeight: FontWeight.w500,
                               // height: 23.44,
@@ -3254,7 +3257,8 @@ class _Screen4State extends State<Screen4> with WidgetsBindingObserver, SingleTi
                                 color: Color(0xffD49A34),
                                 fontFamily: 'Roboto',
                                 // fontSize: (17.17*scale) / mockupWidth * width,
-                                fontSize: (height<=640?15:17.17*scale) / mockupWidth * width,
+                                /*fontSize: (height<=640?15:17.17*scale) / mockupWidth * width,*/
+                                fontSize: isTablat?22:(height<=640?15:17.17*scale) / mockupWidth * width,
                               ),
                             ),
                           ),
@@ -3676,16 +3680,21 @@ class _Screen4State extends State<Screen4> with WidgetsBindingObserver, SingleTi
 
                                     fontSize: // ((boardData["script"] as Map<String, dynamic>)[((boardData["board"] as List)[index] as List)[index1]]
                                     //     == keypad)? ((15*scale)/mockupWidth*width) :
-                                    (((boardData["board"] as List)[index] as List)[index1] == selectedKey)? ((15*scale)/mockupWidth*width) :
-
-
+                                    /*(((boardData["board"] as List)[index] as List)[index1] == selectedKey)? ((15*scale)/mockupWidth*width) :
                                     (boardData["script"] as Map<String, dynamic>)[((boardData["board"] as List)[index] as List)[index1]]==""?
                                         // (selectedKey!="" && selectedKey==((boardData["board"] as List)[index] as List)[index1])?
                                           (selectedKey!="" && (selectedKey==((boardData["board"] as List)[index] as List)[index1]))?
                                             (boardData["script1"] as Map<String, dynamic>).containsKey(selectedKey)? ((10*scale)/mockupWidth*width):((15*scale)/mockupWidth*width)
                                           : ((10*scale)/mockupWidth*width)
                                     : (boardData["script"] as Map<String, dynamic>).containsKey(((boardData["board"] as List)[index] as List)[index1])?
-                                      ((15*scale)/mockupWidth*width): ((10*scale)/mockupWidth*width),
+                                      ((15*scale)/mockupWidth*width): ((10*scale)/mockupWidth*width),*/
+                                    (((boardData["board"] as List)[index] as List)[index1] == selectedKey)? ((isTablat?15:15*scale)/mockupWidth*width) :
+                                    (boardData["script"] as Map<String, dynamic>)[((boardData["board"] as List)[index] as List)[index1]]==""?
+                                    (selectedKey!="" && (selectedKey==((boardData["board"] as List)[index] as List)[index1]))?
+                                    (boardData["script1"] as Map<String, dynamic>).containsKey(selectedKey)? ((isTablat?10:10*scale)/mockupWidth*width):((isTablat?15:15*scale)/mockupWidth*width)
+                                        : ((isTablat?10:10*scale)/mockupWidth*width)
+                                        : (boardData["script"] as Map<String, dynamic>).containsKey(((boardData["board"] as List)[index] as List)[index1])?
+                                    ((isTablat?15:15*scale)/mockupWidth*width): ((isTablat?10:10*scale)/mockupWidth*width),
 
                                     // (selectedKey!="" && (selectedKey==((boardData["board"] as List)[index] as List)[index1]))?
                                     //   (boardData["script1"] as Map<String, dynamic>).containsKey(selectedKey)? ((10*scale)/mockupWidth*width):((15*scale)/mockupWidth*width)

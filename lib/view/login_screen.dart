@@ -1,7 +1,7 @@
-import 'dart:async';
+// import 'dart:async';
 // import 'dart:html';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
+// import 'package:cloud_firestore/cloud_firestore.dart';
 // import 'package:f2f_puzzlegame/model/constants.dart';
 // import 'package:f2f_puzzlegame/model/page_route.dart';
 // import 'package:f2f_puzzlegame/view/auth_screen.dart';
@@ -126,7 +126,6 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 )
             ),
-
 
             //text
             Positioned(
@@ -266,24 +265,25 @@ class _LoginScreenState extends State<LoginScreen> {
                             controller: emailCtrl,
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.text,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               hintText: "Email",
                               hintStyle: TextStyle(
                                 // color: Color(0xffffffff),
                                 color: Color(0xff989898),
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w600,
-                                fontSize: 15,
+                                /*fontSize: 15,*/
+                                fontSize: isTablat?20:15,
                               ),
-                              border: UnderlineInputBorder(
+                              border: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              enabledBorder: UnderlineInputBorder(
+                              enabledBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
@@ -302,7 +302,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           height: (isTablat?50:50*scale)/mockupHeight*height,
                           alignment: Alignment.center,
                           margin: EdgeInsets.symmetric(vertical: 10),
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             color: Color(0xffffffff),
                             borderRadius: BorderRadius.all(Radius.circular(100)),
                             boxShadow: [
@@ -319,24 +319,25 @@ class _LoginScreenState extends State<LoginScreen> {
                             textAlign: TextAlign.center,
                             keyboardType: TextInputType.text,
                             obscureText: true,
-                            decoration: const InputDecoration(
+                            decoration: InputDecoration(
                               hintText: "Password",
                               hintStyle: TextStyle(
                                 // color: Color(0xffffffff),
                                 color: Color(0xff989898),
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w600,
-                                fontSize: 15,
+                                /*fontSize: 15,*/
+                                fontSize: isTablat?20:15,
                               ),
-                              border: UnderlineInputBorder(
+                              border: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              focusedBorder: UnderlineInputBorder(
+                              focusedBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
-                              enabledBorder: UnderlineInputBorder(
+                              enabledBorder: const UnderlineInputBorder(
                                 // borderSide: BorderSide(color: Color(0xffffffff),),
                                 borderSide: BorderSide(color: Colors.transparent,),
                               ),
@@ -380,7 +381,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               // margin: EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                               margin: EdgeInsets.only(left: 0, right: 24, top: 10, bottom: 10),
                               alignment: Alignment.center,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 // color: Color(0xff1E7757),
                                 color: Color(0xffffffff),
                                 borderRadius: BorderRadius.all(Radius.circular(100)),
@@ -515,7 +516,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               height: (isTablat?50:50*scale)/mockupHeight*height,
                               margin: EdgeInsets.symmetric(vertical: 10),
                               alignment: Alignment.center,
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Color(0xff1E7757),
                                 borderRadius: BorderRadius.all(Radius.circular(100)),
                                 boxShadow: [
@@ -527,12 +528,13 @@ class _LoginScreenState extends State<LoginScreen> {
                                   ),
                                 ],
                               ),
-                              child: const Text("Login",
+                              child: Text("Login",
                                 style: TextStyle(
                                   color: Color(0xffffffff),
                                   fontFamily: 'Roboto',
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 15,
+                                  /*fontSize: 15,*/
+                                  fontSize: isTablat?20:15,
                                 ),
                               ),
                             ),
@@ -759,7 +761,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           // height: 50,
                           margin: EdgeInsets.symmetric(vertical: 10, horizontal: 5),
                           alignment: Alignment.center,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             // color: Color(0xff1E7757),
                             borderRadius: BorderRadius.all(Radius.circular(100)),
                             boxShadow: [
@@ -771,13 +773,14 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                             ],
                           ),
-                          child: const Text("Forget Password",
+                          child: Text("Forget Password",
                             style: TextStyle(
                               // color: Color(0xffffffff),
                               color: Color(0xff1E7757),
                               fontFamily: 'Roboto',
                               fontWeight: FontWeight.w600,
-                              fontSize: 15,
+                              /*fontSize: 15,*/
+                              fontSize: isTablat?20:15,
                             ),
                           ),
                         ),

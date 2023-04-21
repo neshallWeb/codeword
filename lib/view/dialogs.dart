@@ -36,11 +36,13 @@ Dialog dialogIncompletePuzzle (BuildContext context, String data){
 
   final scale = mockupWidth / width;
 
+  final bool isTablat = width>500 && height>800?true:false;
+
   return Dialog(
     elevation: 0,
     // insetPadding: EdgeInsets.all(10),
     // insetPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-    insetPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
+    insetPadding: const EdgeInsets.symmetric(horizontal: 30, vertical: 50),
     backgroundColor: Colors.transparent,
     alignment: Alignment.center,
     shape: RoundedRectangleBorder(
@@ -75,8 +77,10 @@ Dialog dialogIncompletePuzzle (BuildContext context, String data){
                   // height: (364*scale)/mockupHeight*height,
                   // width: (364*scale)/mockupWidth*width,
 
-                  height: (300*scale)/mockupHeight*height,
-                  width: (300*scale)/mockupWidth*width,
+                  /*height: (300*scale)/mockupHeight*height,
+                  width: (300*scale)/mockupWidth*width,*/
+                  height: isTablat?300:(300*scale)/mockupHeight*height,
+                  width: isTablat?450:(300*scale)/mockupWidth*width,
 
                   // margin: EdgeInsets.all(20),
                   // margin: EdgeInsets.all(25),
@@ -140,7 +144,8 @@ Dialog dialogIncompletePuzzle (BuildContext context, String data){
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w700,
                                 // fontSize: 20,
-                                fontSize: ((width<=360?16:20)*scale)/mockupWidth*width,
+                                /*fontSize: ((width<=360?16:20)*scale)/mockupWidth*width,*/
+                                fontSize: isTablat?24:((width<=360?16:20)*scale)/mockupWidth*width,
                               ),
 
                             ),
@@ -291,7 +296,8 @@ Dialog dialogIncompletePuzzle (BuildContext context, String data){
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w400,
                                 // fontSize: 13,
-                                fontSize: 15,
+                                /*fontSize: 15,*/
+                                fontSize: isTablat?20:15,
                               ),
 
                             ),
@@ -429,8 +435,10 @@ Dialog dialogIncompletePuzzle (BuildContext context, String data){
                       // width: 60,
                       // height: 50,
                       // width: 50,
-                      height: (50*scale)/mockupHeight*height,
-                      width: (50*scale)/mockupWidth*width,
+                      /*height: (50*scale)/mockupHeight*height,
+                      width: (50*scale)/mockupWidth*width,*/
+                      height: isTablat?60:(50*scale)/mockupHeight*height,
+                      width: isTablat?60:(50*scale)/mockupWidth*width,
                       decoration: BoxDecoration(
                         // color: Color(0xff1E7455),
                         color: Color(0xffC3333C),
@@ -471,6 +479,7 @@ Dialog dialogQuery (BuildContext context, DocumentSnapshot user){
 
   final scale = mockupWidth / width;
 
+  final bool isTablat = width>500 && height>800?true:false;
   // late VideoPlayerController vPlayer;
   // vPlayer = VideoPlayerController.asset('assets/video/Puzzle_Game_Tutorial.mp4');
 
@@ -899,8 +908,10 @@ Dialog dialogQuery (BuildContext context, DocumentSnapshot user){
                       // width: 60,
                       // height: 50,
                       // width: 50,
-                      height: (50*scale)/mockupHeight*height,
-                      width: (50*scale)/mockupWidth*width,
+                      /*height: (50*scale)/mockupHeight*height,
+                      width: (50*scale)/mockupWidth*width,*/
+                      height: isTablat?60:(50*scale)/mockupHeight*height,
+                      width: isTablat?60:(50*scale)/mockupWidth*width,
                       decoration: BoxDecoration(
                         // color: Color(0xff1E7455),
                         color: Color(0xffC3333C),
@@ -1063,7 +1074,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w700,
                                 // fontSize: 20,
-                                fontSize: ((width<=360?16:20)*scale)/mockupWidth*width,
+                                /*fontSize: ((width<=360?16:20)*scale)/mockupWidth*width,*/
+                                fontSize: isTablat?28:((width<=360?16:20)*scale)/mockupWidth*width,
                               ),
 
                             ),
@@ -1138,8 +1150,10 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                           Container(
                             // width: 308,
                             // height: 60,
-                            width: (308*scale)/mockupWidth*width,
-                            height: (60*scale)/mockupHeight*height,
+                            /*width: (308*scale)/mockupWidth*width,*/
+                            /*height: (60*scale)/mockupHeight*height,*/
+                            width: (isTablat?350:308*scale)/mockupWidth*width,
+                            height: (isTablat?70:60*scale)/mockupHeight*height,
                             margin: EdgeInsets.all(17),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
@@ -1150,8 +1164,10 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                   // width: 60,
                                   // height: 50,
                                   // width: 50,
-                                  height: (50*scale)/mockupHeight*height,
-                                  width: (50*scale)/mockupWidth*width,
+                                  /*height: (50*scale)/mockupHeight*height,
+                                  width: (50*scale)/mockupWidth*width,*/
+                                  height: (isTablat?55:50*scale)/mockupHeight*height,
+                                  width: (isTablat?55:50*scale)/mockupWidth*width,
                                   // height: 43,
                                   // width: 43,
                                   decoration: BoxDecoration(
@@ -1204,7 +1220,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                         fontWeight: FontWeight.w700,
                                         // fontSize: (width<=360?16:20*scale)/mockupWidth*width,
                                         // fontSize: ((width<=360?14:20)*scale)/mockupWidth*width,
-                                        fontSize: (width<=360?14:((user["name"] as String).length>14?17:20)*scale)/mockupWidth*width,
+                                        /*fontSize: (width<=360?14:((user["name"] as String).length>14?17:20)*scale)/mockupWidth*width,*/
+                                        fontSize: isTablat?20:(width<=360?14:((user["name"] as String).length>14?17:20)*scale)/mockupWidth*width,
                                       ),
 
                                     ),
@@ -1237,7 +1254,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                           Container(
                             // width: 308,
                             // height: 75,
-                            height: (75*scale)/mockupHeight*height,
+                            /*height: (75*scale)/mockupHeight*height,*/
+                            height: isTablat?85:(75*scale)/mockupHeight*height,
                             width: MediaQuery.of(context).size.width,
                             color: colors.white,
                             // margin: EdgeInsets.all(17),
@@ -1255,7 +1273,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                     fontFamily: 'Roboto',
                                     fontWeight: FontWeight.w700,
                                     // fontSize: 15,
-                                    fontSize: ((width<=360?12:15)*scale)/mockupWidth*width,
+                                    /*fontSize: ((width<=360?12:15)*scale)/mockupWidth*width,*/
+                                    fontSize: isTablat?22:((width<=360?12:15)*scale)/mockupWidth*width,
                                   ),
 
                                 ),
@@ -1272,7 +1291,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                     fontFamily: 'Roboto',
                                     fontWeight: FontWeight.w700,
                                     // fontSize: 25,
-                                    fontSize: ((width<=360?18:25)*scale)/mockupWidth*width,
+                                    /*fontSize: ((width<=360?18:25)*scale)/mockupWidth*width,*/
+                                    fontSize: isTablat?28:((width<=360?18:25)*scale)/mockupWidth*width,
                                   ),
 
                                 ),
@@ -1306,7 +1326,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.w700,
                                             // fontSize: 12,
-                                            fontSize: ((width<=360?10:12)*scale)/mockupWidth*width,
+                                            /*fontSize: ((width<=360?10:12)*scale)/mockupWidth*width,*/
+                                            fontSize: isTablat?18:((width<=360?10:12)*scale)/mockupWidth*width,
                                           ),
 
                                         ),
@@ -1320,7 +1341,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.w700,
                                             // fontSize: 20,
-                                            fontSize: ((width<=360?14:20)*scale)/mockupWidth*width,
+                                            /*fontSize: ((width<=360?14:20)*scale)/mockupWidth*width,*/
+                                            fontSize: isTablat?24:((width<=360?14:20)*scale)/mockupWidth*width,
                                           ),
 
                                         ),
@@ -1345,7 +1367,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.w700,
                                             // fontSize: 12,
-                                            fontSize: ((width<=360?10:12)*scale)/mockupWidth*width,
+                                            /*fontSize: ((width<=360?10:12)*scale)/mockupWidth*width,*/
+                                            fontSize: isTablat?18:((width<=360?10:12)*scale)/mockupWidth*width,
                                           ),
 
                                         ),
@@ -1359,7 +1382,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                             fontFamily: 'Roboto',
                                             fontWeight: FontWeight.w700,
                                             // fontSize: 20,
-                                            fontSize: ((width<=360?14:20)*scale)/mockupWidth*width,
+                                            /*fontSize: ((width<=360?14:20)*scale)/mockupWidth*width,*/
+                                            fontSize: isTablat?24:((width<=360?14:20)*scale)/mockupWidth*width,
                                           ),
 
                                         ),
@@ -1376,7 +1400,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                       fontFamily: 'Roboto',
                                       fontWeight: FontWeight.w700,
                                       // fontSize: 12,
-                                      fontSize: ((width<=360?10:12)*scale)/mockupWidth*width,
+                                      /*fontSize: ((width<=360?10:12)*scale)/mockupWidth*width,*/
+                                      fontSize: isTablat?18:((width<=360?10:12)*scale)/mockupWidth*width,
                                     ),
 
                                   ),
@@ -1396,7 +1421,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w700,
                                           // fontSize: 17,
-                                          fontSize: ((width<=360?13:17)*scale)/mockupWidth*width,
+                                          /*fontSize: ((width<=360?13:17)*scale)/mockupWidth*width,*/
+                                          fontSize: isTablat?24:((width<=360?13:17)*scale)/mockupWidth*width,
                                         ),
 
                                       ),
@@ -1410,7 +1436,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                                           color: colors.white,
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w700,
-                                          fontSize: 12,
+                                          /*fontSize: 12,*/
+                                          fontSize: isTablat?18:((width<=360?12:12)*scale)/mockupWidth*width,
                                         ),
 
                                       ),
@@ -1461,8 +1488,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                       // width: 50,
                       /*height: (50*scale)/mockupHeight*height,
                       width: (50*scale)/mockupWidth*width,*/
-                      height: isTablat?80:(50*scale)/mockupHeight*height,
-                      width: isTablat?80:(50*scale)/mockupWidth*width,
+                      height: isTablat?60:(50*scale)/mockupHeight*height,
+                      width: isTablat?60:(50*scale)/mockupWidth*width,
                       decoration: BoxDecoration(
                         // color: Color(0xff1E7455),
                         color: Color(0xffC3333C),
@@ -1480,8 +1507,8 @@ Dialog dialogPoints (BuildContext context, DocumentSnapshot user){
                         //   ),
                         // ],
                       ),
-                      /*child: Image.asset("assets/images/close.png", scale: 3 * scale,),*/
-                      child: Image.asset("assets/images/close.png", scale: isTablat?4:3 * scale,),
+                      child: Image.asset("assets/images/close.png", scale: 3 * scale,),
+                      /*child: Image.asset("assets/images/close.png", scale: isTablat?4:3 * scale,),*/
                     ),
                   ),
                 ),
@@ -3242,8 +3269,8 @@ dialogMenu (BuildContext context,DocumentSnapshot user) {//usr // MAudio? mAudio
                         // width: 50,
                         /*height: (50*scale)/mockupHeight*height,
                         width: (50*scale)/mockupWidth*width,*/
-                        height: isTablat?80:(50*scale)/mockupHeight*height,
-                        width: isTablat?80:(50*scale)/mockupWidth*width,
+                        height: isTablat?60:(50*scale)/mockupHeight*height,
+                        width: isTablat?60:(50*scale)/mockupWidth*width,
                         decoration: BoxDecoration(
                           // color: Color(0xff1E7455),
                           color: Color(0xffC3333C),
@@ -3262,8 +3289,8 @@ dialogMenu (BuildContext context,DocumentSnapshot user) {//usr // MAudio? mAudio
                           //   ),
                           // ],
                         ),
-                        /*child: Image.asset("assets/images/close.png", scale: 3 * scale,),*/
-                        child: Image.asset("assets/images/close.png", scale: isTablat?4:3 * scale,),
+                        child: Image.asset("assets/images/close.png", scale: 3 * scale,),
+                        /*child: Image.asset("assets/images/close.png", scale: isTablat?4:3 * scale,),*/
                       ),
                     ),
                   ),
@@ -4885,8 +4912,10 @@ Dialog dialogScoreBoard (BuildContext context, DocumentSnapshot user, List users
                                                     // width: 60,
                                                     // height: 50,
                                                     // width: 50,
-                                                    height: (50*scale)/mockupHeight*height,
-                                                    width: (50*scale)/mockupWidth*width,
+                                                    /*height: (50*scale)/mockupHeight*height,
+                                                    width: (50*scale)/mockupWidth*width,*/
+                                                    height: isTablat?65:(50*scale)/mockupHeight*height,
+                                                    width: isTablat?65:(50*scale)/mockupWidth*width,
                                                     // height: 43,
                                                     // width: 43,
                                                     decoration: BoxDecoration(
@@ -4948,7 +4977,8 @@ Dialog dialogScoreBoard (BuildContext context, DocumentSnapshot user, List users
                                                         // fontSize: 20,
                                                         // fontSize: 16,
                                                         // fontSize: (width<=360?14:16*scale)/mockupWidth*width,
-                                                        fontSize: (width<=360?14:((user["name"] as String).length>14?14:16)*scale)/mockupWidth*width,
+                                                        /*fontSize: (width<=360?14:((user["name"] as String).length>14?14:16)*scale)/mockupWidth*width,*/
+                                                        fontSize: isTablat?18:(width<=360?14:((user["name"] as String).length>14?14:16)*scale)/mockupWidth*width,
                                                         // fontSize: (e["name"] as String).length>15?16:20,
                                                       ),
 
@@ -4985,7 +5015,8 @@ Dialog dialogScoreBoard (BuildContext context, DocumentSnapshot user, List users
                                                         fontFamily: 'Roboto',
                                                         fontWeight: FontWeight.w700,
                                                         // fontSize: 20,
-                                                        fontSize: (width<=360?16:20*scale)/mockupWidth*width,
+                                                        /*fontSize: (width<=360?16:20*scale)/mockupWidth*width,*/
+                                                        fontSize: isTablat?20:(width<=360?16:20*scale)/mockupWidth*width,
                                                       ),
 
                                                     ),
@@ -5274,8 +5305,8 @@ Dialog dialogScoreBoard (BuildContext context, DocumentSnapshot user, List users
                       // width: 50,
                       /*height: (50*scale)/mockupHeight*height,
                       width: (50*scale)/mockupWidth*width,*/
-                      height: isTablat?80:(50*scale)/mockupHeight*height,
-                      width: isTablat?80:(50*scale)/mockupWidth*width,
+                      height: isTablat?60:(50*scale)/mockupHeight*height,
+                      width: isTablat?60:(50*scale)/mockupWidth*width,
                       decoration: BoxDecoration(
                         // color: Color(0xff1E7455),
                         color: Color(0xffC3333C),
@@ -5293,8 +5324,8 @@ Dialog dialogScoreBoard (BuildContext context, DocumentSnapshot user, List users
                         //   ),
                         // ],
                       ),
-                      /*child: Image.asset("assets/images/close.png", scale: 3 * scale,),*/
-                      child: Image.asset("assets/images/close.png", scale: isTablat?4:3 * scale,),
+                      child: Image.asset("assets/images/close.png", scale: 3 * scale,),
+                      /*child: Image.asset("assets/images/close.png", scale: isTablat?4:3 * scale,),*/
                     ),
                   ),
                 ),
@@ -5649,7 +5680,7 @@ Dialog dialogClose (BuildContext context, {required DocumentSnapshot user}){
                   /*width: (343*scale)/mockupWidth*width,
                   height: (191*scale)/mockupHeight*height,*/
                   width: isTablat?443:(343*scale)/mockupWidth*width,
-                  height: isTablat?251:(191*scale)/mockupHeight*height,
+                  height: isTablat?220:(191*scale)/mockupHeight*height,
 
                   // margin: EdgeInsets.all(20),
                   // margin: EdgeInsets.all(25),
@@ -5695,8 +5726,8 @@ Dialog dialogClose (BuildContext context, {required DocumentSnapshot user}){
                             // padding: EdgeInsets.all(17),
                             // margin: EdgeInsets.symmetric(vertical: 37),
                             margin: EdgeInsets.only(top: 37),
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.only(
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
                               ),
@@ -5717,7 +5748,8 @@ Dialog dialogClose (BuildContext context, {required DocumentSnapshot user}){
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w700,
                                 // fontSize: 20,
-                                fontSize: (width<=360?14:20*scale)/mockupWidth*width,
+                                /*fontSize: (width<=360?14:20*scale)/mockupWidth*width,*/
+                                fontSize: isTablat?26:(width<=360?14:20*scale)/mockupWidth*width,
                               ),
                               textAlign: TextAlign.justify,
                             ),
@@ -5862,6 +5894,8 @@ Dialog dialogAppClose (BuildContext context){//, {DocumentSnapshot? user}
 
   final scale = mockupWidth / width;
 
+  final bool isTablat = width>500 && height>800?true:false;
+
   return Dialog(
     elevation: 0,
     // insetPadding: EdgeInsets.all(10),
@@ -5895,8 +5929,10 @@ Dialog dialogAppClose (BuildContext context){//, {DocumentSnapshot? user}
 
                   // width: 343,
                   // height: 191,
-                  width: (343*scale)/mockupWidth*width,
-                  height: (191*scale)/mockupHeight*height,
+                  /*width: (343*scale)/mockupWidth*width,
+                  height: (191*scale)/mockupHeight*height,*/
+                  width: isTablat?443:(343*scale)/mockupWidth*width,
+                  height: isTablat?220:(191*scale)/mockupHeight*height,
 
                   // margin: EdgeInsets.all(20),
                   // margin: EdgeInsets.all(25),
@@ -5942,8 +5978,8 @@ Dialog dialogAppClose (BuildContext context){//, {DocumentSnapshot? user}
                             // padding: EdgeInsets.all(17),
                             // margin: EdgeInsets.symmetric(vertical: 37),
                             margin: EdgeInsets.only(top: 37),
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.only(
+                            decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(20),
                                 topRight: Radius.circular(20),
                               ),
@@ -5964,7 +6000,8 @@ Dialog dialogAppClose (BuildContext context){//, {DocumentSnapshot? user}
                                 fontFamily: 'Roboto',
                                 fontWeight: FontWeight.w700,
                                 // fontSize: 20,
-                                fontSize: (width<=360?14:16*scale)/mockupWidth*width,
+                                /*fontSize: (width<=360?14:16*scale)/mockupWidth*width,*/
+                                fontSize: isTablat?24:(width<=360?14:16*scale)/mockupWidth*width,
                               ),
                               textAlign: TextAlign.justify,
                             ),
@@ -6051,6 +6088,8 @@ Dialog dialogShowRankBoard (BuildContext context, DocumentSnapshot user) {
   List users = [];
   // , List users
 
+  final bool isTablat = width>500 && height>800?true:false;
+
   return Dialog(
     elevation: 0,
     // insetPadding: EdgeInsets.all(10),
@@ -6073,8 +6112,10 @@ Dialog dialogShowRankBoard (BuildContext context, DocumentSnapshot user) {
               children: [
 
                 Container(
-                  height: (506*scale)/mockupHeight*height,
-                  width: (364*width)/mockupWidth*width,
+                  /*height: (506*scale)/mockupHeight*height,
+                  width: (364*width)/mockupWidth*width,*/
+                  width: isTablat?400:(375*scale)/mockupWidth*width,
+                  height: isTablat?390:(251.38*scale)/mockupHeight*height,
                   margin: EdgeInsets.all(15),
                   decoration: BoxDecoration(
                     color: colors.white,
@@ -6502,8 +6543,10 @@ Dialog dialogShowRankBoard (BuildContext context, DocumentSnapshot user) {
                                             child: Column(
                                               children: [
                                                 Container(
-                                                  width: (344*scale)/mockupWidth*width,
-                                                  height: (((e["user"] as bool)?75:65)*scale)/mockupHeight*height,
+                                                  /*width: (344*scale)/mockupWidth*width,*/
+                                                  width: isTablat?365:(344*scale)/mockupWidth*width,
+                                                  /*height: (((e["user"] as bool)?75:65)*scale)/mockupHeight*height,*/
+                                                  height: isTablat?70:(((e["user"] as bool)?75:65)*scale)/mockupHeight*height,
                                                   color: (e["user"] as bool)?colors.white:colors.green,
                                                   padding: EdgeInsets.all(17),
                                                   child: Row(
@@ -6513,8 +6556,10 @@ Dialog dialogShowRankBoard (BuildContext context, DocumentSnapshot user) {
                                                       Expanded(
                                                         // flex: 2,
                                                         child: Container(
-                                                          height: (50*scale)/mockupHeight*height,
-                                                          width: (50*scale)/mockupWidth*width,
+                                                          /*height: (50*scale)/mockupHeight*height,
+                                                          width: (50*scale)/mockupWidth*width,*/
+                                                          height: isTablat?70:(50*scale)/mockupHeight*height,
+                                                          width: isTablat?70:(50*scale)/mockupWidth*width,
                                                           decoration: BoxDecoration(
                                                             borderRadius: BorderRadius.circular(180),
                                                           ),
@@ -6539,7 +6584,8 @@ Dialog dialogShowRankBoard (BuildContext context, DocumentSnapshot user) {
                                                               color: (e["user"] as bool)?colors.green:colors.white,
                                                               fontFamily: 'Roboto',
                                                               fontWeight: FontWeight.w700,
-                                                              fontSize: (width<=360?12:((user["name"] as String).length>14?12:14)*scale)/mockupWidth*width,
+                                                              /*fontSize: (width<=360?12:((user["name"] as String).length>14?12:14)*scale)/mockupWidth*width,*/
+                                                              fontSize: isTablat?17:(width<=360?12:((user["name"] as String).length>14?12:14)*scale)/mockupWidth*width,
                                                             ),
                                                           ),
                                                         ),
@@ -6571,7 +6617,8 @@ Dialog dialogShowRankBoard (BuildContext context, DocumentSnapshot user) {
                                                               fontFamily: 'Roboto',
                                                               fontWeight: FontWeight.w700,
                                                               // fontSize: (width<=360?16:20*scale)/mockupWidth*width,
-                                                              fontSize: (width<=360?12:14*scale)/mockupWidth*width,
+                                                              /*fontSize: (width<=360?12:14*scale)/mockupWidth*width,*/
+                                                              fontSize: isTablat?16:(width<=360?12:14*scale)/mockupWidth*width,
                                                             ),
                                                           ),
                                                         ),
@@ -6594,7 +6641,7 @@ Dialog dialogShowRankBoard (BuildContext context, DocumentSnapshot user) {
                                   );
                                 }
 
-                                return Center(
+                                return const Center(
                                   child: CircularProgressIndicator(
                                     color: Colors.white,
                                   ),
@@ -6620,8 +6667,10 @@ Dialog dialogShowRankBoard (BuildContext context, DocumentSnapshot user) {
                       Navigator.of(context).pop();
                     },
                     child: Container(
-                      height: (50*scale)/mockupHeight*height,
-                      width: (50*scale)/mockupWidth*width,
+                      /*height: (50*scale)/mockupHeight*height,
+                      width: (50*scale)/mockupWidth*width,*/
+                      height: isTablat?60:(50*scale)/mockupHeight*height,
+                      width: isTablat?60:(50*scale)/mockupWidth*width,
                       decoration: BoxDecoration(
                         color: Color(0xffC3333C),
                         border: Border.all(width: 3, color: Color(0xffFFFDF9)),
@@ -6656,6 +6705,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
   }
 
   bool showProgress = false;
+
+  final bool isTablat = width>500 && height>800?true:false;
 
   return Dialog(
     elevation: 0,
@@ -6718,9 +6769,13 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
 
                   // width: 375,
                   // height: 231.38,
-                  width: (375*scale)/mockupWidth*width,
+                  /*width: (375*scale)/mockupWidth*width,
                   // height: (231.38*scale)/mockupHeight*height,
-                  height: (251.38*scale)/mockupHeight*height,
+                  height: (251.38*scale)/mockupHeight*height,*/
+                  /*width: isTablat?400:(375*scale)/mockupWidth*width,
+                  height: isTablat?325:(251.38*scale)/mockupHeight*height,*/
+                  width: isTablat?430:(375*scale)/mockupWidth*width,
+                  height: isTablat?360:(251.38*scale)/mockupHeight*height,
 
                   // margin: EdgeInsets.all(20),
                   // margin: EdgeInsets.all(25),
@@ -6818,8 +6873,10 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
 
                                       // height: 43,
                                       // width: 43,
-                                      height: (43*scale)/mockupHeight*height,
-                                      width: (43*scale)/mockupWidth*width,
+                                      /*height: (43*scale)/mockupHeight*height,
+                                      width: (43*scale)/mockupWidth*width,*/
+                                      height: (isTablat?50:43*scale)/mockupHeight*height,
+                                      width: (isTablat?50:43*scale)/mockupWidth*width,
                                       decoration: BoxDecoration(
                                         // color: Color(0xff1E7455),
                                         // color: Color(0xffC3333C),
@@ -6867,7 +6924,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                             // fontSize: 16,
                                             // fontSize: (((user["name"]??"") as String)).length>15?16:20,
                                             // fontSize: (width<=360?12:(((user["name"]??"") as String)).length>15?16:20*scale)/mockupWidth*width,
-                                            fontSize: (width<=384?12:(((user["name"]??"") as String)).length>15?16:20*scale)/mockupWidth*width,
+                                            /*fontSize: (width<=384?12:(((user["name"]??"") as String)).length>15?16:20*scale)/mockupWidth*width,*/
+                                            fontSize: isTablat?20:(width<=384?12:(((user["name"]??"") as String)).length>15?16:20*scale)/mockupWidth*width,
                                           ),
 
                                         ),
@@ -6888,7 +6946,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                               color: colors.white,
                                               // fontSize: 20.0,
                                               // fontSize: (width<=360?16:20.0*scale)/mockupWidth*width,
-                                              fontSize: (width<=384?16:20.0*scale)/mockupWidth*width,
+                                              /*fontSize: (width<=384?16:20.0*scale)/mockupWidth*width,*/
+                                              fontSize: isTablat?20:(width<=384?16:20.0*scale)/mockupWidth*width,
                                               // letterSpacing: -1.5,
                                               fontWeight: FontWeight.w700,
                                               // height: 23.44,
@@ -6900,7 +6959,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                             style: GoogleFonts.roboto(
                                               // color: Color(0xff74C171),
                                               color: colors.white,
-                                              fontSize: 12.0,
+                                              /*fontSize: 12.0,*/
+                                              fontSize: isTablat?15:12.0,
                                               // letterSpacing: -1.5,
                                               fontWeight: FontWeight.w500,
                                               // height: 23.44,
@@ -6930,11 +6990,12 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                           child: Text(
                                             // "Correct Words     :            ${20}",
                                             // "Correct Words     :            ${data["correct-word"]}",
-                                            "Correct Character     :            ${data["correct-word"]??"Na"}",
+                                            "Correct Character      :            ${data["correct-word"]??"Na"}",
                                             style: GoogleFonts.roboto(
                                               // color: Color(0xff74C171),
                                               color: colors.white,
-                                              fontSize: 10.0,
+                                              /*fontSize: 10.0,*/
+                                              fontSize: isTablat?16:10.0,
                                               // letterSpacing: -1.5,
                                               fontWeight: FontWeight.w500,
                                               // height: 23.44,
@@ -6997,7 +7058,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                                   style: GoogleFonts.roboto(
                                                     // color: Color(0xff74C171),
                                                     color: colors.white,
-                                                    fontSize: 10.0,
+                                                    /*fontSize: 10.0,*/
+                                                    fontSize: isTablat?16:10.0,
                                                     // letterSpacing: -1.5,
                                                     fontWeight: FontWeight.w500,
                                                     // height: 23.44,
@@ -7007,7 +7069,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                                   style: GoogleFonts.roboto(
                                                     // color: Color(0xff74C171),
                                                     color: colors.white,
-                                                    fontSize: 10.0,
+                                                    /*fontSize: 10.0,*/
+                                                    fontSize: isTablat?16:10.0,
                                                     // letterSpacing: -1.5,
                                                     fontWeight: FontWeight.w500,
                                                     // height: 23.44,
@@ -7022,7 +7085,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                                   style: GoogleFonts.roboto(
                                                     // color: Color(0xff74C171),
                                                     color: colors.orange,
-                                                    fontSize: 10.0,
+                                                    /*fontSize: 10.0,*/
+                                                    fontSize: isTablat?16:10.0,
                                                     // letterSpacing: -1.5,
                                                     fontWeight: FontWeight.w500,
                                                     // height: 23.44,
@@ -7032,7 +7096,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                                   style: GoogleFonts.roboto(
                                                     // color: Color(0xff74C171),
                                                     color: colors.white,
-                                                    fontSize: 10.0,
+                                                    /*fontSize: 10.0,*/
+                                                    fontSize: isTablat?16:10.0,
                                                     // letterSpacing: -1.5,
                                                     fontWeight: FontWeight.w500,
                                                     // height: 23.44,
@@ -7060,7 +7125,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                             style: GoogleFonts.roboto(
                                               // color: Color(0xff74C171),
                                               color: colors.white,
-                                              fontSize: 10.0,
+                                              /*fontSize: 10.0,*/
+                                              fontSize: isTablat?16:10.0,
                                               // letterSpacing: -1.5,
                                               fontWeight: FontWeight.w500,
                                               // height: 23.44,
@@ -7094,7 +7160,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                             // color: colors.white,
                                             color: colors.red,
                                             // fontSize: 10.0,
-                                            fontSize: 14.0,
+                                            /*fontSize: 14.0,*/
+                                            fontSize: isTablat?20:14.0,
                                             fontWeight: FontWeight.w600,
                                           ),
                                         ),
@@ -7130,7 +7197,8 @@ Dialog dialogUserBoard (BuildContext context, String mode, String level, Documen
                                           color: colors.white,
                                           // fontSize: 17.0,
                                           // fontSize: (width<=360?15:17.0*scale)/mockupWidth*width,
-                                          fontSize: (width<=384?15:17.0*scale)/mockupWidth*width,
+                                          /*fontSize: (width<=384?15:17.0*scale)/mockupWidth*width,*/
+                                          fontSize: isTablat?18:(width<=384?15:17.0*scale)/mockupWidth*width,
                                           // letterSpacing: -1.5,
                                           fontWeight: FontWeight.w600,
                                           // height: 23.44,
@@ -7378,6 +7446,8 @@ class Dialogs {
 
     final scale = mockupWidth / width;
 
+    final bool isTablat = width>500 && height>800?true:false;
+
     showDialog(
         context: context,
         // barrierDismissible: false,
@@ -7388,7 +7458,7 @@ class Dialogs {
             return Dialog(
               elevation: 0,
               // insetPadding: EdgeInsets.all(10),
-              insetPadding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              insetPadding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               backgroundColor: Colors.transparent,
               alignment: Alignment.center,
               shape: RoundedRectangleBorder(
@@ -7408,8 +7478,10 @@ class Dialogs {
                           Container(
                             // width: 343,
                             // height: 191,
-                            width: (343*scale)/mockupWidth*width,
-                            height: (191*scale)/mockupHeight*height,
+                            /*width: (343*scale)/mockupWidth*width,
+                            height: (191*scale)/mockupHeight*height,*/
+                            width: isTablat?443:(343*scale)/mockupWidth*width,
+                            height: isTablat?251:(191*scale)/mockupHeight*height,
                             margin: EdgeInsets.all(
                                 MediaQuery.of(context).size.width*0.025
                             ),
@@ -7418,7 +7490,7 @@ class Dialogs {
                               borderRadius: BorderRadius.circular(25),
                             ),
                             child: Container(
-                              margin: EdgeInsets.symmetric(horizontal: 10),
+                              margin: const EdgeInsets.symmetric(horizontal: 10),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(25),
                               ),
@@ -7453,7 +7525,8 @@ class Dialogs {
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w700,
                                           // fontSize: 20,
-                                          fontSize: 16,
+                                          /*fontSize: 16,*/
+                                          fontSize: isTablat?24:16,
                                         ),
                                         textAlign: TextAlign.justify,
                                       ),
@@ -7483,7 +7556,8 @@ class Dialogs {
                                           fontFamily: 'Roboto',
                                           fontWeight: FontWeight.w700,
                                           // fontSize: 20,
-                                          fontSize: 14,
+                                          /*fontSize: 14,*/
+                                          fontSize: isTablat?22:14,
                                         ),
                                         // textAlign: TextAlign.justify,
                                       ),
